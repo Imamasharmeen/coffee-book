@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Banner() {
+export default function Header() {
   return (
     <div>
-      <h1>Banner</h1>
+      <h1>Header</h1>
     </div>
   )
 }

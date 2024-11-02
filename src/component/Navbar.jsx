@@ -28,7 +28,7 @@ export default function Navbar() {
                     <Link to='/dashboard'>Dashboard</Link>
                 </ul>
             </div>
-            <a className="btn btn-ghost text-xl">Coffee Book</a>
+            <Link to='/' className="btn btn-ghost text-xl">Coffee Book</Link>
         </div>
         <div className="navbar-end hidden lg:flex ">
             <ul className="menu menu-horizontal px-1 gap-8">
