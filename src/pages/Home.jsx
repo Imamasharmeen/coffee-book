@@ -6,7 +6,7 @@ import Category from '../component/Category'
 export default function Home() {
   return (
     <div>
-      <h1>Home...</h1>
+      
       {/**
        * banner
        * Header
@@ -14,7 +14,7 @@ export default function Home() {
        */}
 
        <Banner></Banner>
-       <Header></Header>
+       <Header title={'Browse Coffees by Category'} subtitle={'Choose your desired coffee category to browse through specific coffees that fit in your taste.'}></Header>
        <Category></Category>
     </div>
   )

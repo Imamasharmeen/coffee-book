@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Banner() {
   return (
-    <div>
-      <h1>Banner</h1>
+    <div className="hero bg-banner bg-base-200 min-h-[600px]">
+      <h1></h1>
     </div>
   )
 }
