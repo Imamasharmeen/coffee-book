@@ -1,18 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {  useLoaderData, useParams } from 'react-router-dom'
 import Items from './Items'
 
 
 export default function CoffeeCard() {
+    const[coffees, setCoffees]= useState([])
     const {category}= useParams()
     const data = useLoaderData()
-    console.log(data)
+ 
+    useEffect(() => {
+    
+        const filteredByCategory = [...data].filter(
+          coffee => coffee.category === category
+        );
+        setCoffees(filteredByCategory)
+    
+    }, [category, data])
     
   return (
     <div>
-       <h1>{category}</h1>
+       
        {
-        data.map(cards =><Items key={cards.category} cards={cards}></Items>)
+        coffees.map(cards =><Items key={cards.id} cards={cards}></Items>)
        }
     </div>
   )
