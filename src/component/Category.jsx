@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 export default function Category({category}) {
@@ -8,7 +8,7 @@ export default function Category({category}) {
     <div>
       <div role="tablist" className="tabs tabs-lifted">
         {
-          category.map(categoryItem=>(<Link key={categoryItem.id} to={`/category/${categoryItem.category}`} role="tab" className="tab">{categoryItem.category}</Link>))
+          category.map(categoryItem=>(<NavLink key={categoryItem.id} to={`/category/${categoryItem.category}`} role="tab" className={({isActive})=>`tab ${isActive?'tab-active':''}`}>{categoryItem.category}</NavLink>))
         }
       </div>
     </div>
