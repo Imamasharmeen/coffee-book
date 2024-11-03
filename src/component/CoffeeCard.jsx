@@ -17,7 +17,7 @@ export default function CoffeeCard() {
               setCoffees(filteredByCategory)
         }
         else{
-            setCoffees(data)
+            setCoffees(data.slice(0, 6))
         }
     
     }, [category, data])
