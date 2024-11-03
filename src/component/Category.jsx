@@ -8,7 +8,7 @@ export default function Category({category}) {
     <div>
       <div role="tablist" className="tabs tabs-lifted">
         {
-          category.map(categoryItem=>(<NavLink key={categoryItem.id} to={`/category/${categoryItem.category}`} role="tab" className={({isActive})=>`tab ${isActive?'tab-active':''}`}>{categoryItem.category}</NavLink>))
+          category.map(categoryItem=>(<NavLink key={categoryItem.id} to={`/category/${categoryItem.category}`} role="tab" className={({isActive})=>`${isActive?'tab-active':''} tab text-2xl font-thin `}>{categoryItem.category}</NavLink>))
         }
       </div>
     </div>

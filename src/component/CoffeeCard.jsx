@@ -26,13 +26,13 @@ export default function CoffeeCard() {
   return (
     <div>
        
-      <div>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-12'>
       {
         coffees.map(cards =><Items key={cards.id} cards={cards}></Items>)
        }
       </div>
 
-       <button onClick={()=> navigate('/coffees')}>View All</button>
+       <button className='btn btn-warning' onClick={()=> navigate('/coffees')}>View All</button>
     </div>
   )
 }
