@@ -18,7 +18,7 @@ const route =createBrowserRouter ([
             {
               path: "/category/:category",
               element: <CoffeeCard></CoffeeCard>,
-              loader: ()=> fetch('../Coffees.json')
+              loader: ()=> fetch('../coffees.json'),
             },
           ]
         },
