@@ -10,10 +10,15 @@ export default function CoffeeCard() {
  
     useEffect(() => {
     
-        const filteredByCategory = [...data].filter(
-          coffee => coffee.category === category
-        );
-        setCoffees(filteredByCategory)
+        if(category){
+            const filteredByCategory = [...data].filter(
+                coffee => coffee.category === category
+              );
+              setCoffees(filteredByCategory)
+        }
+        else{
+            setCoffees(data)
+        }
     
     }, [category, data])
     
